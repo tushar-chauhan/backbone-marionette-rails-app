@@ -42,6 +42,25 @@ body {
   background-color: #FFFCC9;
 }
 
+#error_explanation {
+  background-color: #f2dede;
+  padding: 1px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #8a6d3b;
+
+  h2 {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 13px;
+  }
+}
+
 .loader:before,
 .loader:after,
 .loader {
