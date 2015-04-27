@@ -1,19 +1,18 @@
 @TodoDemo.module 'TodosApp.Edit', (Edit, App, Backbone, Marionette, $, _) ->
 
-  Edit.Controller =
+  class Edit.Controller extends Marionette.Controller
 
-    editTodo: (todo) ->
-      todo.on 'all', (e) -> console.log e
+    initialize: (todo) ->
+      # todo.on 'all', (e) -> console.log e
       @editTodoView = @getEditTodoView(todo)
 
-      @editTodoView.on 'update:todo': (args) ->
+      @listenTo @editTodoView, 'update:todo': (args) ->
         data = Backbone.Syphon.serialize(args.view);
-        console.log data
         args.model.save data,
           patch: true
 
       todo.collection.on 'model:updated': ->
-        todo.collection.sort()
+        @sort()
         App.getRegion('dialog').destroy @editTodoView
 
       App.getRegion('dialog').show @editTodoView

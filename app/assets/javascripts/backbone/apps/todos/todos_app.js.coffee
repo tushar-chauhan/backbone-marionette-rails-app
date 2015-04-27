@@ -8,9 +8,9 @@
     list: ->
       new TodosApp.List.Controller
     new: (collection) ->
-      TodosApp.New.Controller.newTodo(collection)
+      new TodosApp.New.Controller(collection)
     edit: (todo) ->
-      TodosApp.Edit.Controller.editTodo(todo)
+      new TodosApp.Edit.Controller(todo)
 
   App.vent.on 'new:dialog:clicked', (todos) ->
     API.new(todos)

@@ -1,10 +1,11 @@
 @TodoDemo.module 'TodosApp.New', (New, App, Backbone, Marionette, $, _) ->
 
-  New.Controller =
-    newTodo: (collection) ->
+  class New.Controller extends Marionette.Controller
+
+    initialize: (collection) ->
       todo = App.request 'new:todo:entity'
       @newTodoView = @getNewTodoView(todo, collection)
-      @newTodoView.on 'create:new:todo': (args) ->
+      @listenTo @newTodoView, 'create:new:todo': (args) ->
         data = Backbone.Syphon.serialize(args.view);
         args.model.save data,
           collection: collection

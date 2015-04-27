@@ -3,7 +3,6 @@
   class List.Controller extends Marionette.Controller
 
     initialize: ->
-      window.c = @
       App.request 'todos:entities', (todos) =>
 
         @layout = @getLayoutView()
