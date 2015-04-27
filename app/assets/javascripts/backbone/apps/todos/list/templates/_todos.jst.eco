@@ -1,0 +1,9 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class='col-xs-9'>Todos</th>
+      <th class='col-xs-3 text-center'>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>

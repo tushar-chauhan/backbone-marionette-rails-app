@@ -1,0 +1,6 @@
+asset 'backbone'
+asset 'underscore'
+asset 'marionette'
+asset 'backbone.syphon'
+asset 'bootstrap-sass-official'
+# vim: ft=ruby

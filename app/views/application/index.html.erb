@@ -1,0 +1,16 @@
+<div id="header-region"></div>
+<div class='container-fluid'>
+  <div class="row">
+    <div id="main-region" class="col-sm-6 col-xs-12 col-sm-offset-3"></div>
+  </div>
+</div>
+<div id="dialog"></div>
+<div id="footer-region" class="col-xs-12 text-center"></div>
+<%= javascript_tag do %>
+  $(function(){
+    TodoDemo.start({
+      env: gon.env,
+      currentUser: gon.current_user
+    });
+  });
+<% end %>

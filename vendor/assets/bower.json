@@ -1,0 +1,10 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "backbone": "latest",
+    "underscore": "latest",
+    "marionette": "latest",
+    "backbone.syphon": "latest",
+    "bootstrap-sass-official": "latest"
+  }
+}

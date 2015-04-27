@@ -1,0 +1,5 @@
+<% if @method: %>
+  <a href="<%= @href %>" data-method='<%= @method %>'><%= @name %></a>
+<% else: %>
+  <a href="<%= @href %>"><%= @name %></a>
+<% end %>
